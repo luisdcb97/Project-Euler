@@ -11,7 +11,13 @@ def is_palindrome(number: int) -> bool:
 
 def three_digit_prod():
     for number_1 in range(999, 99, -1):
-        for number_2 in range(999, 99, -1):
+        if number_1 % 11 == 0:
+            decrement = -1
+            start = 999
+        else:
+            start = 990
+            decrement = -11
+        for number_2 in range(start, number_1, decrement):
             yield (number_1 * number_2, number_1, number_2)
 
 
