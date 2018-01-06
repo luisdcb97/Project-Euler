@@ -28,11 +28,7 @@ def three_digit_palindrome():
 
 
 def find_max_palindrome():
-    prod_list = []
-    for prod_tuple in three_digit_palindrome():
-        prod_list.append(prod_tuple)
-
-    return max(prod_list, key=lambda t: t[0])
+    return max(three_digit_palindrome(), key=lambda t: t[0])
 
 
 if __name__ == '__main__':
